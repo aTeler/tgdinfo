@@ -1,0 +1,36 @@
+.encabezado {
+    color: rgb(5, 96, 96);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    ;
+    font-style: normal;
+    font-size: medium;
+    background-color: rgba(205, 219, 247, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+   
+  }
+h3 {
+    color: cornflowerblue;
+  }
+ul {
+    list-style-type: none;
+    margin: 0;
+     padding: 0;
+    }
+
+li {
+     display: inline;
+    }
+
+.boton {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    ;
+    font-size: large;
+    font-weight: bold;
+      color: rgb(3, 3, 49);
+      box-shadow:aliceblue;
+
+    }

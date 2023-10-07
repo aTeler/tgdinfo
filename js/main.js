@@ -1,1 +1,1 @@
-// todavia nada de java 
+document.getElementById("pie").innerHTML = " Sistemas DGT - 2023 v1.0";
