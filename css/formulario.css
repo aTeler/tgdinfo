@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #274e75;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #274e75;
+}
+
+h1 {
+    text-align: center;
+    color: #457397;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #8ca4b4;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: hidden;;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #6d7874;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8ca4b4;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin-bottom: 10px; /* Agregamos margen inferior para separar los campos */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #344b7b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 105%;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Estilos adicionales para los colores especificados */
+#nombre, #apellido, #email, #direccion, #ciudad, #codigoPostal, #telefono, #fechaNacimiento, #comentarios {
+    background-color: #c8cacb;
+    color: #243b2b;
+}
+
+/* Media queries para la adaptabilidad */
+@media (max-width: 768px) {
+    .container {
+        padding: 50px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        padding: 8px;
+    }
+    
+    button {
+        padding: 8px 16px;
+    }
+}
+.gender-options {
+    display: flex;
+    flex-direction: row; /* Alinea horizontalmente */
+    align-items: center;
+}
+
+.gender-options label {
+    margin-right: 20px; /* Espaciado entre las opciones */
+}
