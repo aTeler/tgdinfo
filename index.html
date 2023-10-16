@@ -6,39 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/menu.css">
     <title>InFo - Encuestas</title>   
-    <script src="js/main.js"></script>
+    
 </head>
 
-    <header>
-        <iframe src="encabezado.html" frameborder="0" width="100%" height="140"></iframe>   
-    </header>
-<body>
+<header>
+    <div id="principal">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="encabezado">
+            <nav id="menu">
+            </nav>
+        </div>
+    </div>
+
+<script src="./js/menu.js"></script>              
+</header>
+
+<body> 
+    <form name="form1" id="form1" action="/clientes.html"></form>
+   
+<script>
+let opciones='<ul> ';
+    opciones=opciones+'<li><button class="boton">PRODUCTOS</button></li>  <li><input type="button" class="boton"  onclick="form1.submit window.location.href='http://localhost/curso/info/clientes.html';" type="submit" value="CLIENTES!"></li>';
+
+   // document.querySelector("form1").submit();
+
+
+
+
+    //<li><button class="boton">CONTACTO</button></li>      <li><button class="boton"><i class="fa fa-user-o"></i>INICIAR SESIÓN</button></li>    </ul>';
+
+   // opciones = '<h1>Clase JS 6</h1> <nav><a href="index.html">Servicios</a>     <a href="clientes.html">Clientes</a> <a href="sucursales.html">Sucursales</a>  <a href="registro">Registro</a><a href="login">login</a></nav> '
+   // document.getElementById("principal").innerHTML = opciones;
+</script>
+    <script src="js/main.js"></script>
+   
 <div class="contenedor-flex">
     <div class="columna">
-        <h2>Columna 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur laboriosam inventore in aliquam! Quaerat ut possimus adipisci tempore delectus autem, et saepe? Enim debitis quae laboriosam ex maxime culpa earum.
+        <h2>Acceso a una amplia audiencia</h2>
+        <p class="parrafo">Las encuestas telefónicas permiten llegar a una audiencia diversa y representativa. Puedes contactar a personas de diferentes grupos demográficos y regiones geográficas para obtener una visión más completa de tus temas de interés.
         </p>
     </div>
 
     <div class="columna">
-        <h2>Columna 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur laboriosam inventore in aliquam! Quaerat ut possimus adipisci tempore delectus autem, et saepe? Enim debitis quae laboriosam ex maxime culpa earum.
+        <h2>Rapidez en la recopilación de datos</h2>
+        <p class="parrafo">Las encuestas telefónicas suelen ser más rápidas que otras formas de recolección de datos, como encuestas en persona o por correo. Puedes obtener resultados en un corto período de tiempo, lo que es esencial en situaciones donde se requiere información actualizada.
         </p>
     </div>
 
     <div class="columna">
-        <h2>Columna 3</h2> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur laboriosam inventore in aliquam! Quaerat ut possimus adipisci tempore delectus autem, et saepe? Enim debitis quae laboriosam ex maxime culpa earum.
+        <h2>Interacción directa</h2> 
+        <p class="parrafo">Las encuestas telefónicas permiten una interacción directa entre el encuestador y el encuestado. Esto significa que el encuestador puede aclarar preguntas o proporcionar aclaraciones, lo que puede mejorar la calidad de las respuestas y reducir la confusión.
         </p>
     </div>
 </div>
     <div class="carrusel"> 
-        <img src="cati_sistema.jpg">
+        <img src="cati_sistema.jpg"  height="60%">
     </div>
 
     
 </body>
-    <footer id="pie" name="pie">    
-    </footer>
 
+
+    <footer id="pie" name="pie"> 
+      
+    </footer>
+    <script src="/js/pie.js"></script>
 </html>

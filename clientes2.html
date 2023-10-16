@@ -1,0 +1,44 @@
+<!-- Clientes -->
+
+<!DOCTYPE html>
+<html lang="es">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <title>InFo - Encuestas</title>   
+    <!--script src="js/main.js"></script-->
+        
+</head>
+
+    <!--header>
+        <iframe src="encabezado.html" frameborder="0" width="100%" height="140"></iframe>   
+    </header-->
+
+<body>
+
+        <div id="app">
+            
+          <h3>Clientes que confiaron en nuestros servicios</h3>
+
+          <div class="slider-container" v-for="cliente in clientes">  
+            <div class="slider-item">
+           <img v-bind:src="cliente.picture.thumbnail" :alt="cliente.name.last">
+              <h4><b>{{cliente.name.first}},{{cliente.name.last}}</b></h4>
+              <p>{{cliente.location.city}},
+                {{cliente.location.state}}-
+                {{cliente.location.country}}</p>
+          </div>     
+        </div>
+
+
+                
+        </div>
+        
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./js/clientes.js"></script>                         
+
+</body>

@@ -59,7 +59,7 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-button {
+.btn-enviar {
     background-color: #344b7b;
     color: #ffffff;
     padding: 10px 20px;

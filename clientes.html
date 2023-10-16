@@ -1,0 +1,69 @@
+<!-- Clientes -->
+<!DOCTYPE html>
+<html lang="es">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <title>InFo - Encuestas</title>   
+    
+</head>
+
+<header>
+    <div id="principal">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="encabezado">
+            <nav id="menu">
+            </nav>
+        </div>
+    </div>
+
+<script src="./js/menu.js"></script>              
+</header>
+
+<body>
+
+        <div id="app">
+            
+          <h3>Clientes que confiaron en nuestros servicios</h3>
+ 
+                <table id="tabla_clientes">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Localidad</th>
+                            <th>Ciudad</th>
+                            <th>Pais</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="cliente in clientes">
+                            <th><div class="celda">{{cliente.name.first}}</div></th>
+                            <th><div class="celda">{{cliente.name.last}}</div></th>
+                            <th><div class="celda">{{cliente.location.city}}</div></th>
+                            <th><div class="celda">{{cliente.location.state}}</div></th>
+                            <th><div class="celda">{{cliente.location.country}}</div></th>
+                            <th><img v-bind:src="cliente.picture.large" :alt="cliente.name.last"></th>
+                            
+                        </tr>
+                         <ul>
+ 
+            <!--li v-for="user in users" :key="user.login.uuid">
+              {{ user.name.first }} {{ user.name.last }}
+            </li-->
+          </ul>
+                    </tbody>
+                    
+                </table>
+                
+
+        
+        </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./js/clientes.js"></script>                         
+
+</body>

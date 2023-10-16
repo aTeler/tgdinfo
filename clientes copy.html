@@ -1,0 +1,85 @@
+<!-- Clientes -->
+
+<!DOCTYPE html>
+<html lang="es">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>InFo - Encuestas</title>   
+    <script src="js/main.js"></script>
+    <script scr="/js/clientes.js">
+
+        
+    </script>
+</head>
+
+    <header>
+        <iframe src="encabezado.html" frameborder="0" width="100%" height="140"></iframe>   
+    </header>
+<body>
+            <h3>Nombres de Clientes Generados</h1>
+                
+            <table id="tabla_clientes">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Localidad</th>
+                        <th>Ciudad</th>
+                        <th>Pais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los nombres generados se mostrarán aquí -->
+                </tbody>
+            </table>
+       
+    
+   <script > 
+document.addEventListener("DOMContentLoaded", function () {
+    const tablaNombres = document.getElementById("tabla_clientes").getElementsByTagName('tbody')[0];
+    //?results=25&nat=es,mx,br
+    // ?&nat=es,mx,br?page=1&results=20&seed=abc&inc=gender,name,nat,location,email,cell
+    // Llamada a la API para obtener nombres
+    fetch("https://randomuser.me/api/?results=25&nat=es,mx,br")
+        .then(response => response.json())
+        .then(data => {
+            data.results.forEach(result => {
+                const nombre = result.name.first;
+                const apellido = result.name.last;
+                //"location":{"street":{"number":2479,"name":"Henry Street"}
+                const calle = result.location.street.name;
+                const numero = result.location.street.number;
+                // "city":"Blessington","state":"Wexford","country":"Ireland"
+
+                const ciudad = result.location.city;
+                const provincia = result.location.state; 
+                const pais = result.location.country;
+
+
+                // Crear una nueva fila de la tabla
+                const row = tablaNombres.insertRow();
+
+                // Insertar celdas para el nombre y el apellido
+                const cellNombre = row.insertCell(0);
+                const cellApellido = row.insertCell(1);
+                const cellCalle = row.insertCell(2);
+                const cellProvincia = row.insertCell(3);
+                const cellPais = row.insertCell(4);
+
+
+                // Agregar los datos a las celdas
+                cellNombre.textContent = nombre;
+                cellApellido.textContent = apellido;
+                cellCalle.textContent = calle+" "+numero+" ("+ciudad+")";
+                cellProvincia.textContent = provincia;
+                cellPais.textContent = pais;
+            });
+        })
+        .catch(error => {
+            console.error("Error al obtener nombres:", error);
+        });
+});</script>
+</body>
