@@ -34,28 +34,24 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #274e75;
-    
-    
     ;
     font-style: normal;
     font-size: medium;
     height: 100vh;
-     
-    
 
     }
 .contenedor-flex {
             display: flex; 
         }
 footer {
-        font-size: small;
+        font-size: 10px;
        
          position: fixed;
             bottom: 0;
             width: 100%;
             background-color: #333;
             color: white;
-            text-align: center;
+            text-align: right;
             padding: 10px 0;
     }
 .columna {
@@ -124,3 +120,37 @@ nav ul li a {
     font-size: 20px;
     color: #FFFFFF;
 }
+
+.barra {
+    position: fixed;
+    overflow: hidden;
+    background-color: #6d7874;
+  }
+  
+.barra a {
+    float: left;
+    color: #efefef;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.barra a:hover {
+    background-color: #ddd;
+    color: #274e75 ;
+  }
+  
+.barra a.active {
+    background-color: #457397;
+    color: white;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
