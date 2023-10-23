@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    background-color: #6d7874;
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font: 400;
+    font-size: 3em;
+    color:#274e75;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font:300;
+    font-size: 35px;
+    color: #274e75;
+}
+
+h4{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font:300;
+    font-size: 30px;
+    color: #6d7874;
+
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font: 200;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+ 
+}
+
+.item{
+    background-color: #ffffff;
+    padding: 20px; 
+    text-align: center;
+}
+
+.columna{
+    background-color: #efefef;
+    border-radius: 10px;
+    border: 2px solid #a7a6a4;
+    
+}
+
+.popular{
+    
+    border: 3px solid #457397;
+}
+
+
+.titulo{
+    grid-area: 1 / 1 / 2 / -1;
+    
+}
+
+.susGrat{
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 0;
+    display: flex;
+    grid-area: 3 / 1 /4 / 4;
+    justify-content: space-between;
+    
+}
+
+.suscripcion{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button {
+    background-color: #457397;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.lista{
+    font-family: 'Lato', sans-serif;
+    font: 200;
+    font-size: 1em;
+    list-style-position: inside;
+    padding: 20px;
+    text-align: left;
+    line-height: 35px;
+    position: relative;
+    top: 2vh;
+    
+}
+
+.lista_free{
+    
+    font-family: 'Lato', sans-serif;
+    font: 200;
+    font-size: 1.1em;
+    list-style-position: inside;
+    text-align: left;
+    padding: 5px;
+}
+
+.aPruebaGratis{
+    background-color: #457397;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
+    top: 5vh;
+    right: 2vh;
+}
+
+.bullet_lista{
+    list-style-image: url(/trabajo_practico/img/bxs-checkbox-checked.svg);
+
+}
+
+.bullet_mini{
+    list-style-image: url(/trabajo_practico/img/bxs-checkbox.svg);
+
+
+}
+.bullet_standard{
+    list-style-image: url(/trabajo_practico/img/bxs-checkbox.svg);
+
+}
+
+footer{
+    background-color: lightslategray;
+    padding: 20px;
+    
+}
+
+
+#tel{
+    position: fixed;
+    bottom: 4em;
+    right: 2em;
+
+}
+
+#whatsapp{
+    width:4em;
+    
+}
+
+@media screen and (max-width: 600px){
+	.contenedor {
+		display: flex;
+        flex-direction: column;
+	}
+
+    .texto{
+        display: none;
+    }
+
+    .susGrat{
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .aPruebaGratis{
+        position:unset;
+    }
+
+    .lista_free{
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    header{
+        padding: 0;
+    }
+    .item{
+        padding: 0;
+        margin: 0;
+    }
+
+    .free{
+        position: relative;
+        top: 2vh;
+        right: auto;
+    }
+
+    .lista_free{
+        position: relative;
+        top: -3vh;
+        right: auto;
+    }
+
+    .aPruebaGratis{
+        position: relative;
+        top: -4vh;
+        right: auto;
+    }
+}
