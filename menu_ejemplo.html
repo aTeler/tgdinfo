@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="style">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #f7dcdc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables fin */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.menu-hamburguesa {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+</style>
+<body>
+    <nav>
+        <h1>JANE DOE</h1>
+        <ul class="navegacion">
+          <li><a href="#sobremi" class="nav-link">Servicios</a></li>
+          <li><a href="#habilidaes" class="nav-link">Clientes</a></li>
+          <li><a href="#proyectos" class="nav-link">Contacto</a></li>
+          <li><a href="#contacto" class="nav-link">Acceso Usuarios</a></li>
+        </ul>
+        <button class="menu-hamburguesa" id="menu-hamburguesa">
+          <ion-icon class="barras" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+  <section class="hero" id="about">
+    <img
+      src="assets/images/wfh_1.svg"
+      alt="jane-doe"
+      loading="lazy"
+      class="hero-img"
+    />
+    <div class="bio animate__animated animate__shakeX">
+      <h2 class="bio-titulo">Sobre Mí</h2>
+      <p class="bio-texto">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+        dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+        inventore tempore minus nemo, iste ullam illo laboriosam maiores
+        repudiandae quos!
+      </p>
+    </div>
+</section>
+
+</body>
+</html>
