@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/sociales.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    
-<div class="barra" id="menu">
-</div>
- 
-<script src="./js/menu.js"></script> 
-    
+    <header>
+        <h1>header</h1>
+
+    </header>
     <main>
         
         <div class="contenedor">
@@ -39,7 +34,9 @@
                 <h3>Mini</h3>
                 <h4>2.858 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <a class="button" href="">adquierelo ahora</a>
+                <div class="hover">
+                    <a class="button" href="">adquierelo ahora</a>
+                </div>
                 <ul class="lista">
                     <li class="bullet_lista">Encuestas ilimitadas</li>
                     <li class="bullet_lista">Preguntas ilimitadas</li>
@@ -62,11 +59,14 @@
                 </ul>
 
             </div>
-            <div class="item columna popular">
+           
+            <div class="item columna popular">                                
                 <h3>Standard</h3>
                 <h4>5.716 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <a class="button" href="">adquierelo ahora</a>
+                <div class="hover">
+                    <a class="button" href="">adquierelo ahora</a>
+                </div>
                 <ul class="lista">
                     <li class="bullet_lista">Encuestas ilimitadas</li>
                     <li class="bullet_lista">Preguntas ilimitadas</li>
@@ -94,7 +94,9 @@
                 <h3>Pro</h3>
                 <h4>9.748 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <a class="button" href="">adquierelo ahora</a>
+                <div class="hover">
+                    <a class="button" href="">adquierelo ahora</a>
+                </div>
                 <ul class="lista">
                     <li class="bullet_lista">Encuestas ilimitadas</li>
                     <li class="bullet_lista">Preguntas ilimitadas</li>
@@ -131,25 +133,20 @@
                     </ul>
                 </div>    
                 <div class="cajaDerecha">
-                    <a class="aPruebaGratis" href="">pruebalo ahora</a>
+                    <div class="hover">
+                        <a class="button" href="">adquierelo ahora</a>
+                    </div>
                 </div> 
             </div>
-            
-            <a id="tel" href="https://api.whatsapp.com/send/?phone=1111+11111">
-                <img id="whatsapp" src="./img/whatsapp.png" alt="whatsapp">
+            <a class="tel" href="https://api.whatsapp.com/send/?phone=1111+11111">
+                <img class="whatsapp" src="./img/whatsapp.png" alt="whatsapp">
             </a>
-            <div>
-                <p>popular</p>
-            </div>
-        
 
         </div>
         
     </main>
-    <footer id="pie" name="pie"> 
-        
+    <footer>
+        <h2>footer</h2>
     </footer>
-    <script src="./js/pie.js"></script>
-    
 </body>
 </html>
