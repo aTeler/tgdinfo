@@ -1,0 +1,45 @@
+<!-- Clientes -->
+<!DOCTYPE html>
+<html lang="es">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>InFo - Encuestas</title>   
+    
+</head>
+
+<body>
+    <div class="barra" id="menu">
+    </div>
+
+    <script src="./js/menu.js"></script>   
+    <link rel="stylesheet" href="./css/menu.css">
+    
+    <link rel="stylesheet" href="./css/clientes2.css">
+        <div id="app">
+            
+          <h3>Clientes que confiaron en nuestros servicios</h3>
+                       
+                          <div class="card" v-for="cliente in clientes">                             
+                                <img v-bind:src="cliente.picture.large" :alt="cliente.name.last">
+                                <div class="container">
+                                  <h4><b>{{cliente.name.first}},{{cliente.name.last}}</b></h4>
+                                  <p>{{cliente.location.city}},{{cliente.location.state}}-{{cliente.location.country}} </p>
+                             </div>
+                           </div>
+                                            
+        </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./js/clientes.js"></script>                         
+
+</body>
+
+<footer id="pie" name="pie"> 
+        
+</footer>
+<script src="./js/pie.js"></script>
