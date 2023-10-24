@@ -73,12 +73,14 @@ p{
     background-color: #efefef;
     border-radius: 10px;
     border: 2px solid #a7a6a4;
-    
+     
 }
+
 
 .popular{
     
     border: 3px solid #457397;
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 
@@ -113,7 +115,8 @@ p{
     display: inline-block;
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  }
+}
+
 
 .lista{
     font-family: 'Lato', sans-serif;
@@ -149,7 +152,7 @@ p{
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     position: relative;
-    top: 5vh;
+    top: 2vh;
     right: 2vh;
 }
 
@@ -175,15 +178,25 @@ footer{
 }
 
 
-#tel{
+.tel{
     position: fixed;
     bottom: 4em;
     right: 2em;
 
 }
 
-#whatsapp{
+.whatsapp{
     width:4em;
+    
+}
+
+@media (hover: hover) {
+    .hover :hover{
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -ms-transform:scale(1.05);
+        transition: 300ms; 
+    }
     
 }
 
@@ -210,6 +223,11 @@ footer{
         margin: 20px;
         padding: 20px;
     }
+
+    /*.masVendido{
+        position: absolute;
+    
+    }*/
 }
 
 @media screen and (max-width: 300px){
