@@ -14,11 +14,63 @@ form {
   margin-bottom: 20px;
 }
 
-.box {
-  display: flex;
-  flex-flow: row wrap;
+.tarjeta{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items: center ;
+  width:280px;
+  border: 1px solid #457397;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+  font-family: sans-serif;
+  background-color: #efefef;
+}
+.titulo{
+  font-size: 16px;
+  padding: 10px 10px 0 10px;;
+}
+.cuerpo{
+  padding: 10px;
+}
+.piet{
+ 
+background: #a7a6a4;
+  border-radius:0 0 15px 15px;
+  padding: 4px;
+  text-align:center;
+  font-size: small;
+  width: 260px;
+  height: 70px;
+
 }
 
+.box {
+  
+    /*ocupa solo el 80% de la ventana*/
+    max-width: 80%;
+    /* y esta centrado*/
+    margin: auto;
+    /*un máximo de tres columnas*/
+    column-count: 4;
+    /*la anchura mínima de cada columna es de 250px*/
+    column-width: 250px;
+  
+  /*padding: 10px 10px 10px 10px;*/
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.linea1{
+  display:flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #efefef;
+}
 
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
@@ -26,11 +78,26 @@ img {
 }
 
 .card {
-   border-radius: 5px; /* 5px rounded corners */
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* width: 20em;
+   border-radius: 5px; 
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
   transition: 0.3s;
+  align-items: center;
+  
+  /*justify-content: center;*/
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:20em;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+ 
 }
+
+
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -40,6 +107,12 @@ img {
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+  background-color: #ffffff;
+}
+
+.texto {
+  font-size: small;
+  text-align: center;
 }
 
 table {
