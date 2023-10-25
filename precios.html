@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/sociales.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>header</h1>
-
-    </header>
+    
+<div class="barra" id="menu">
+</div>
+ 
+<script src="./js/menu.js"></script> 
+    
     <main>
         
         <div class="contenedor">
@@ -32,15 +39,11 @@
             </div>
             <div class="item columna">
                 <h3>Mini</h3>
-                <h4>2.858 ARS</h4>
+                <h4>20.000 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <div class="hover">
-                    <a class="button" href="">adquierelo ahora</a>
-                </div>
+                <a class="button" href="">adquierelo ahora</a>
                 <ul class="lista">
-                    <li class="bullet_lista">Encuestas ilimitadas</li>
-                    <li class="bullet_lista">Preguntas ilimitadas</li>
-                    <li class="bullet_lista">Respuestas ilimitadas</li>
+                   
                     <li class="bullet_lista">Plantillas de encuestas profesionales</li>
                     <li class="bullet_lista">Preguntas con reglas lógicas</li>
                     <li class="bullet_lista">Canales de distribución ampliados</li>
@@ -51,24 +54,21 @@
                     <li class="bullet_lista">Exportar respuestas a Google Sheets</li>
                     <li class="bullet_lista">Copia de seguridad en la nube <br> (Dropbox, Google Drive, OneDrive)</li>
                     <li class="bullet_mini">Quiz (asignación de puntos)</li>
-                    <li class="bullet_mini">Desaparición de cualquier referencia a SurveyPack (Marca blanca)</li>
+                  
                     <li class="bullet_mini">Planificación de envío de los correos</li>
                     <li class="bullet_mini">Notificación nuevos encuestados</li>
                     <li class="bullet_mini">Gestión multiusuarios (modo individual, colaborativo, jerárquico)</li>
-                    <li class="bullet_mini">Asistencia en línea prioritaria (chat en línea y ticket)</li>
+                  
                 </ul>
 
             </div>
-           
-            <div class="item columna popular">                                
+            <div class="item columna popular">
                 <h3>Standard</h3>
-                <h4>5.716 ARS</h4>
+                <h4>35.000 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <div class="hover">
-                    <a class="button" href="">adquierelo ahora</a>
-                </div>
+                <a class="button" href="">adquierelo ahora</a>
                 <ul class="lista">
-                    <li class="bullet_lista">Encuestas ilimitadas</li>
+                    
                     <li class="bullet_lista">Preguntas ilimitadas</li>
                     <li class="bullet_lista">Respuestas ilimitadas</li>
                     <li class="bullet_lista">Plantillas de encuestas profesionales</li>
@@ -81,7 +81,7 @@
                     <li class="bullet_lista">Exportar respuestas a Google Sheets</li>
                     <li class="bullet_lista">Copia de seguridad en la nube <br> (Dropbox, Google Drive, OneDrive)</li>
                     <li class="bullet_lista">Quiz (asignación de puntos)</li>
-                    <li class="bullet_lista">Desaparición de cualquier referencia a SurveyPack (Marca blanca)</li>
+                    
                     <li class="bullet_lista">Planificación de envío de los correos</li>
                     <li class="bullet_standard">Notificación nuevos encuestados</li>
                     <li class="bullet_standard">Gestión multiusuarios (modo individual, colaborativo, jerárquico)</li>
@@ -92,11 +92,9 @@
             </div>
             <div class="item columna">
                 <h3>Pro</h3>
-                <h4>9.748 ARS</h4>
+                <h4>50.000 ARS</h4>
                 <p class="suscripcion">suscripcion anual</p>
-                <div class="hover">
-                    <a class="button" href="">adquierelo ahora</a>
-                </div>
+                <a class="button" href="">adquierelo ahora</a>
                 <ul class="lista">
                     <li class="bullet_lista">Encuestas ilimitadas</li>
                     <li class="bullet_lista">Preguntas ilimitadas</li>
@@ -133,20 +131,25 @@
                     </ul>
                 </div>    
                 <div class="cajaDerecha">
-                    <div class="hover">
-                        <a class="button" href="">adquierelo ahora</a>
-                    </div>
+                    <a class="aPruebaGratis" href="">pruebalo ahora</a>
                 </div> 
             </div>
-            <a class="tel" href="https://api.whatsapp.com/send/?phone=1111+11111">
-                <img class="whatsapp" src="./img/whatsapp.png" alt="whatsapp">
+            
+            <a id="tel" href="https://api.whatsapp.com/send/?phone=1111+11111">
+                <img id="whatsapp" src="./img/whatsapp.png" alt="whatsapp">
             </a>
+            <div>
+                <p>popular</p>
+            </div>
+        
 
         </div>
         
     </main>
-    <footer>
-        <h2>footer</h2>
+    <footer id="pie" name="pie"> 
+        
     </footer>
+    <script src="./js/pie.js"></script>
+    
 </body>
 </html>
