@@ -165,9 +165,9 @@ nav ul li a {
     overflow: hidden;
     background-color: ;
     padding-bottom: 10px;*/
-    height: 40px;
+    height: 60px;
     max-width: 100%; /* Establece un ancho máximo para el contenedor */
-    width: 90%; /* Ajusta el ancho en pantallas más grandes */
+    width: 100%; /* Ajusta el ancho en pantallas más grandes */
   }
   
 .barra a {
