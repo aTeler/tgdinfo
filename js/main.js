@@ -9,7 +9,6 @@ let opciones = '<h1>Clase JS 6</h1> <nav><a href="index.html">Servicios</a>     
 document.querySelector("menu").innerHTML=opciones;
 document.getElementById("principal").innerHTML = "nuevo";
 
-
 /**<li><button class="boton">PRODUCTOS</button></li>
      <li><input type="button" class="boton"  onclick="window.location.href='http://localhost/curso/info/clientes.html';" type="submit" value="CLIENTES!"></li>
      <li><button class="boton">CONTACTO</button></li>

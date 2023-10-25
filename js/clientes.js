@@ -7,7 +7,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            url: "https://randomuser.me/api/?results=25&nat=es,mx,br",
+            url: "https://randomuser.me/api/?results=32&nat=es,mx,br",
             error: false,
             datos: [],
             nombre: "Clientes!!!",
