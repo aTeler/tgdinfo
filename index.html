@@ -1,226 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
-     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/footer.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>InFo - Encuestas</title>   
-    
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>InFo - Encuestas</title>
+  </head>
 
+  <div class="barra" id="menu"></div>
 
-<div class="barra" id="menu">
-</div>
-
-<body> 
-
-<script src="./js/menu.js"></script> 
+  <body>
+    <script src="./js/menu.js"></script>
     <!--form name="form1" id="form1" action="/clientes.html"></form-->
-   
+
     <script src="js/main.js"></script>
-   
-<div class="contenedor-flex">
-    <div class="columna">
+
+    <div class="contenedor">
+      
+      <div class="item text0">
+        <img src="./img/survey_check.png" alt="">
+
+        <h1>encuestas por llamadas telefonicas</h1>
+      </div>
+      <div class="item text1">
         <h2>Acceso a una amplia audiencia</h2>
-        <p class="parrafo">Las encuestas telefónicas permiten llegar a una audiencia diversa y representativa. Puedes contactar a personas de diferentes grupos demográficos y regiones geográficas para obtener una visión más completa de tus temas de interés.
+        <p class="parrafo">
+          Las encuestas telefónicas permiten llegar a una audiencia diversa y
+          representativa. Puedes contactar a personas de diferentes grupos
+          demográficos y regiones geográficas para obtener una visión más
+          completa de tus temas de interés.
         </p>
-        <h2>Flexibilidad en la programación:</h2>
-        <p class="parrafo"> Puedes programar las encuestas telefónicas en momentos que sean convenientes para tus encuestados, como en horarios de la tarde o los fines de semana, lo que puede aumentar la tasa de respuesta.
-        </p>
+      </div>
 
-    </div>
+      <img src="./img/img-8.jpg" alt="" class="item img1" />
+      
+      <img src="./img/img-1.jpg" alt="" class="item img2" />
 
-    <div class="columna">
+      <div class="item text2">
         <h2>Rapidez en la recopilación de datos</h2>
-        <p class="parrafo">Las encuestas telefónicas suelen ser más rápidas que otras formas de recolección de datos, como encuestas en persona o por correo. Puedes obtener resultados en un corto período de tiempo, lo que es esencial en situaciones donde se requiere información actualizada.
+        <p class="parrafo">
+          Las encuestas telefónicas suelen ser más rápidas que otras formas de
+          recolección de datos, como encuestas en persona o por correo. Puedes
+          obtener resultados en un corto período de tiempo, lo que es esencial
+          en situaciones donde se requiere información actualizada.
         </p>
-        <h2>Costos razonables</h2>
-        <p class="parrafo">En comparación con otras formas de recopilación de datos, como encuestas en persona, las encuestas telefónicas suelen ser más económicas. Esto puede ser beneficioso, especialmente para organizaciones con presupuestos limitados.
+      </div>
+
+      <div class="item text3">
+        <h2>Interacción directa</h2>
+        <p class="parrafo">
+          Las encuestas telefónicas permiten una interacción directa entre el
+          encuestador y el encuestado. Esto significa que el encuestador puede
+          aclarar preguntas o proporcionar aclaraciones, lo que puede mejorar la
+          calidad de las respuestas y reducir la confusión.
         </p>
+      </div>
+      <div class="iframe">
+        <iframe width="420" height="345" src="https://www.youtube.com/embed/rF0nbwY1OUU"></iframe>
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/cati_sistema.jpg" style="width: 100%" />
+        <div class="text">Call Center Buenos Aires</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="./img/equipo.jpg" style="width: 100%" />
+        <div class="text">Analisis de Encuestas</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./img/llamando.jpg" style="width: 100%" />
+        <div class="text">Call Center Rosario</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-    <div class="columna">
-        <h2>Interacción directa</h2> 
-        <p class="parrafo">Las encuestas telefónicas permiten una interacción directa entre el encuestador y el encuestado. Esto significa que el encuestador puede aclarar preguntas o proporcionar aclaraciones, lo que puede mejorar la calidad de las respuestas y reducir la confusión.
-        </p>
-        <iframe width="420" height="345" src="https://www.youtube.com/embed/rF0nbwY1OUU">
-        </iframe>
-    </div>
-</div>
-<style>
-    * {box-sizing:border-box}
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
 
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
 
-.mySlides {
-  display: none;
-}
-
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-</style>
-
-
-<!-- Slideshow container -->
-<div class="slideshow-container">
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="./img/cati_sistema.jpg" style="width:100%">
-      <div class="text">Call Center Buenos Aires</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="./img/equipo.jpg" style="width:100%">
-      <div class="text">Analisis de Encuestas</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="./img/llamando.jpg" style="width:100%">
-      <div class="text">Call Center Rosario</div>
-    </div>
-
-   
-  
-   
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-
-  <script>
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-  </script>
-
-    
-
-    
-</body>
-
-
-    <footer id="pie" name="pie"> 
-       
-    </footer>
-    <script src="./js/pie.js"></script>
+  <footer id="pie" name="pie"></footer>
+  <script src="./js/pie.js"></script>
 </html>
