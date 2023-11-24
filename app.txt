@@ -1,0 +1,133 @@
+from flask import Flask ,jsonify ,request
+# del modulo flask importar la clase Flask y los métodos jsonify,request
+from flask_cors import CORS       # del modulo flask_cors importar CORS
+from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+app=Flask(__name__)  # crear el objeto app de la clase Flask
+CORS(app) #modulo cors es para que me permita acceder desde el frontend al backend
+
+
+# configuro la base de datos, con el nombre el usuario y la clave
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/proyecto'
+# URI de la BBDD                          driver de la BD  user:clave@URLBBDD/nombreBBDD
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False #none
+db= SQLAlchemy(app)   #crea el objeto db de la clase SQLAlquemy
+ma=Marshmallow(app)   #crea el objeto ma de de la clase Marshmallow
+
+# id, usuario, clave, apellidos, nombres, mail, rol, fecha alta activo, bloqueado, empresa
+
+# defino las tablas
+class Usuario(db.Model):   # la clase Producto hereda de db.Model    
+    id=db.Column(db.Integer, primary_key=True)   #define los campos de la tabla
+    usuario=db.Column(db.String(15))
+    clave=db.Column(db.String(15))
+    apellidos=db.Column(db.String(50))
+    nombres=db.Column(db.String(50))
+    mail=db.Column(db.String(100))
+    rol=db.Column(db.Integer)
+    fecha_alta=db.Column(db.Date)
+    activo=db.Column(db.Bool)
+    empresa=db.Column(db.Integer)
+
+    def __init__(self,usuario,clave,apellidos,nombres,mail,rol,fecha_alta,activo,empresa):   #crea el  constructor de la clase
+        self.usuario=usuario   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
+        self.clave=clave
+        self.apellidos=apellidos
+        self.nombres=nombres
+        self.mail=mail
+        self.rol=rol
+        self.fecha_alta=fecha_alta
+        self.activo=activo
+        self.empresa=empresa
+
+#  si hay que crear mas tablas , se hace aqui
+
+class Empresa(db.Model):   # la clase Producto hereda de db.Model    
+    id=db.Column(db.Integer, primary_key=True)   #define los campos de la tabla
+    empresa=db.Column(db.String(50))
+    direccion=db.Column(db.String(100))
+    localidad=db.Column(db.String(50))
+    provincia=db.Column(db.String(50))
+    pais=db.Column(db.String(50))
+    cp=db.Column(db.String(15))
+    mail=db.Column(db.String(100))
+    telefono=db.Column(db.String(20))
+
+    def __init__(self,empresa,direccion,localidad,provincia,pais,cp,mail,telefono):   #crea el  constructor de la clase
+        self.empresa=empresa   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
+        self.direccion=direccion
+        self.localidad=localidad
+        self.provincia=provincia
+        self.pais=pais
+        self.cp=cp
+        self.mail=mail
+        self.telefono=telefono
+
+
+with app.app_context():
+    db.create_all()  # aqui crea todas las tablas
+#  ************************************************************
+class UsuarioSchema(ma.Schema):
+    class Meta:
+        fields=('id','usuario','clave','apellidos','nombres','mail','rol','fecha_alta','activo','empresa')
+usuario_schema =UsuarioSchema()            # El objeto producto_schema es para traer un producto
+usuarios_schema=UsuarioSchema(many=True)  # El objeto productos_schema es para traer multiples registros de producto
+
+
+# crea los endpoint o rutas (json)
+@app.route('/usuarios',methods=['GET'])
+def get_Usuarios():
+    all_usuarios=Usuario.query.all()         # el metodo query.all() lo hereda de db.Model
+    result=usuarios_schema.dump(all_usuarios)  # el metodo dump() lo hereda de ma.schema y
+                                                 # trae todos los registros de la tabla
+    return jsonify(result)                       # retorna un JSON de todos los registros de la tabla
+
+
+
+
+@app.route('/usuarios/<id>',methods=['GET'])
+def get_producto(id): #hasta aca
+    producto=Producto.query.get(id)
+    return producto_schema.jsonify(producto)   # retorna el JSON de un producto recibido como parametro
+
+
+@app.route('/productos/<id>',methods=['DELETE'])
+def delete_producto(id):
+    producto=Producto.query.get(id)
+    db.session.delete(producto)
+    db.session.commit()                     # confirma el delete
+    return producto_schema.jsonify(producto) # me devuelve un json con el registro eliminado
+
+
+@app.route('/productos', methods=['POST']) # crea ruta o endpoint
+def create_producto():
+    #print(request.json)  # request.json contiene el json que envio el cliente
+    nombre=request.json['nombre']
+    precio=request.json['precio']
+    stock=request.json['stock']
+    imagen=request.json['imagen']
+    new_producto=Producto(nombre,precio,stock,imagen)
+    db.session.add(new_producto)
+    db.session.commit() # confirma el alta
+    return producto_schema.jsonify(new_producto)
+
+
+
+@app.route('/productos/<id>' ,methods=['PUT'])
+def update_producto(id):
+    producto=Producto.query.get(id)
+ 
+    producto.nombre=request.json['nombre']
+    producto.precio=request.json['precio']
+    producto.stock=request.json['stock']
+    producto.imagen=request.json['imagen']
+
+
+    db.session.commit()    # confirma el cambio
+    return producto_schema.jsonify(producto)    # y retorna un json con el producto
+ 
+
+
+# programa principal *******************************
+if __name__=='__main__':  
+    app.run(debug=True, port=5000)    # ejecuta el servidor Flask en el puerto 5000
