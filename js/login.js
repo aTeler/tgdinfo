@@ -24,3 +24,20 @@ togglePassword.addEventListener("click", function () {
         password.type = "password";
     }
 });
+
+function login() {
+    alert('login!!!')
+    usuario = document.getElementById("usuario").value;
+    clave = document.getElementById("contraseña").value;
+    
+        // Guarda las variables en localStorage
+        localStorage.setItem('usuario', usuario);
+        localStorage.setItem('clave', clave);
+
+        // Redirige a la otra página
+        window.location.href = "usuarios.html";
+    }
+
+
+
+
