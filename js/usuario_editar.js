@@ -12,10 +12,9 @@ const { createApp } = Vue
         nombres:"",
         mail:"",
         rol:"",
-        fecha_alta:"",
         activo:0,
         empresa:0,
-        url:'https://surveypack.pythonanywhere.com/usuarios/'+id,
+        url:'https://ateler.pythonanywhere.com/usuarios/'+id,
        }  
     },
     methods: {
@@ -31,7 +30,6 @@ const { createApp } = Vue
                     this.nombres=data.nombres
                     this.mail=data.mail
                     this.rol=data.rol
-                   // this.fecha_alta=data.fecha_alta
                     this.activo=data.activo
                     this.empresa=data.empresa
                 
@@ -48,7 +46,6 @@ const { createApp } = Vue
                 apellidos: this.apellidos,
                 mail: this.mail,
                 rol: this.rol,
-                //fecha_alta: this.fecha_alta,
                 activo: this.activo,
                 empresa: this.empresa
             }
