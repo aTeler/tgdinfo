@@ -15,7 +15,7 @@ const { createApp } = Vue
         apellidos:"",
         nombres:"",
         mail:"",
-        rol:"",
+        rol:0,
         activo:0,
         empresa:0,
     }  
