@@ -23,15 +23,15 @@ const { createApp } = Vue
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
-                    this.id=data.id
-                    this.usuario = data.usuario
-                    this.clave = data.clave
-                    this.apellidos=data.apellidos
-                    this.nombres=data.nombres
-                    this.mail=data.mail
-                    this.rol=data.rol
-                    this.activo=data.activo
-                    this.empresa=data.empresa
+                    this.id       = data.id
+                    this.usuario  = data.usuario
+                    this.clave    = data.clave
+                    this.apellidos= data.apellidos
+                    this.nombres  = data.nombres
+                    this.mail     = data.mail
+                    this.rol      = data.rol
+                    this.activo   = data.activo
+                    this.empresa  = data.empresa
                 
                 })
                 .catch(err => {
@@ -41,13 +41,14 @@ const { createApp } = Vue
         },
         modificar() {
             let usuario = {
-                usuario:this.usuario,
-                clave: this.clave,
+                usuario:   this.usuario,
+                clave:     this.clave,
                 apellidos: this.apellidos,
-                mail: this.mail,
-                rol: this.rol,
-                activo: this.activo,
-                empresa: this.empresa
+                nombres:   this.nombres,
+                mail:      this.mail,
+                rol:       this.rol,
+                activo:    this.activo,
+                empresa:   this.empresa
             }
             var options = {
                 body: JSON.stringify(usuario),
@@ -56,7 +57,7 @@ const { createApp } = Vue
                 redirect: 'follow'
             }
             fetch(this.url, options)
-                .then(function () {
+                .then(function() {
                     alert("Registro modificado")
                     window.location.href = "./usuarios.html"; // navega a usuarios.html          
                 })
