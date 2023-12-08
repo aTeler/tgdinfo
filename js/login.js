@@ -35,7 +35,9 @@ function login() {
         localStorage.setItem('clave', clave);
 
         // Redirige a la otra página
-        window.location.href = "usuarios.html";
+        window.location.href = "https://surveypack.netlify.app/usuarios/"; 
+     
+        
     }
 
 
