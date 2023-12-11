@@ -27,8 +27,9 @@ togglePassword.addEventListener("click", function () {
 
 function login() {
     alert('login!!!')
-    usuario = document.getElementById("usuario").value;
-    clave = document.getElementById("contraseña").value;
+    let usuario = document.getElementById("usuario").value;
+    let clave = document.getElementById("contraseña").value;
+    alert('u:'+usuario);
     
         // Guarda las variables en localStorage
         localStorage.setItem('usuario', usuario);
